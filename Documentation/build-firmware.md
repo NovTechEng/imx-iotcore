@@ -25,12 +25,15 @@ This document describes how to set up a build environment to build the latest fi
 
 1) Clone all repositories into the same directory as the imx-iotcore repo.
     ```bash
-    $ git clone --recursive https://github.com/ms-iot/imx-iotcore.git
-    $ git clone --recursive -b u-boot-imx https://github.com/ms-iot/u-boot.git
-    $ git clone -b ms-iot https://github.com/ms-iot/optee_os.git
+    $ git clone --recursive -b Provisioning https://github.com/ms-iot/imx-iotcore.git
+    $ git clone --recursive -b Provisioning https://github.com/ms-iot/u-boot.git
+    $ git clone -b Provisioning https://github.com/ms-iot/optee_os.git
     $ git clone --recursive -b tcps-feature https://github.com/Microsoft/RIoT.git
-    $ git clone -b imx https://github.com/ms-iot/imx-edk2-platforms.git
+    $ git clone -b Provisioning https://github.com/ms-iot/imx-edk2-platforms.git
     $ git clone --recursive https://github.com/tianocore/edk2
+    $ cd edk2
+    $ git checkout b566259c8a2447cc3db9979d815d955a90431520
+    $ cd ..
     ```
     Optionally, clone the TPM reference implementation (`imx-edk2-platforms` includes a precompiled TPM binary)
     ```bash
